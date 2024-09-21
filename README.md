@@ -23,7 +23,7 @@ class LinkedList:
     """
     This class is an implementation of a linked list data structure.
     """
-    def __init__(self, value=None):
+    def __init__(self, value):
         new_node = Node(value)
         self.head = new_node
         self.tail = new_node
