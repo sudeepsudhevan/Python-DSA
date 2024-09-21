@@ -30,4 +30,5 @@ class LinkedList:
         self.length = 1
 
 my_linked_list = LinkedList(4)
+print(my_linked_list.head.value) # 4
 ```
