@@ -2,6 +2,8 @@
 
 ## Linked List
 
+### 1. Constructor
+
 To create a new Node
 ```py
 class Node:
