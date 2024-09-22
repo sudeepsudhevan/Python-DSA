@@ -129,8 +129,8 @@ class LinkedList:
             self.head = new_node
             self.tail = new_node
         else:
-            self.tail.next = new_node
-            self.tail = new_node
+            self.tail.next = new_node # in practical Here adding the new node to tail node next ie.(nodelast.next = new_node)
+            self.tail = new_node      # here setting the new node as new tail node ie.(nodelast = new_node)
         
         self.length += 1
 
