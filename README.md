@@ -94,7 +94,7 @@ my_linked_list.print_list()
 """
 
 ```
-
+### 2. Append
 Append an item to linked list
 
 ```py
@@ -166,7 +166,7 @@ my_linked_list.print_list()
 """
 
 ```
-
+### 3. Pop
 Pop an Item from the Linked List
 ```py
 class Node:
@@ -285,7 +285,7 @@ check(None, linked_list.tail, "Tail of linked list (after third pop):")
 check(0, linked_list.length, "Length of linked list (after third pop):")
 
 ```
-
+### 4.Prepend
 Prepend an Item to the Linked List
 ```py
 class Node:
