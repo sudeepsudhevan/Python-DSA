@@ -285,7 +285,7 @@ check(None, linked_list.tail, "Tail of linked list (after third pop):")
 check(0, linked_list.length, "Length of linked list (after third pop):")
 
 ```
-### 4.Prepend
+### 4. Prepend
 Prepend an Item to the Linked List
 ```py
 class Node:
