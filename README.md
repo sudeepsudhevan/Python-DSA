@@ -343,6 +343,7 @@ class LinkedList:
             new_node.next = self.head
             self.head = new_node
         self.length +=1
+        return True
 
 
 my_linked_list = LinkedList(2)
