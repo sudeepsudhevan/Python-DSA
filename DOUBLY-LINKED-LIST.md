@@ -39,7 +39,7 @@ print('Length:', my_doubly_linked_list.length)
 ```
 
 ### 2. Append
-Add an item to DDL
+Add an item to the end of DDL
 
 ```py
 class Node:
