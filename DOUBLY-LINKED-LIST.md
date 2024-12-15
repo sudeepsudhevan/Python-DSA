@@ -307,7 +307,7 @@ my_doubly_linked_list.print_list()
 
 ### 4.Pop First
 Removes the first node from the doubly linked list
-```
+```py
 class Node:
     def __init__(self, value):
         self.value = value
