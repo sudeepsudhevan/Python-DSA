@@ -955,6 +955,7 @@ class DoublyLinkedList:
             return self.pop()
         
         temp = self.get(index)
+        temp.next.prev = temp.prev
         temp.prev.next = temp.next
         temp.next = None
         temp.prev = None
