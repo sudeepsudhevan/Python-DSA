@@ -619,3 +619,211 @@ print ( reverse_string(my_string) )
 """
 
 ```
+### 6. Stack: Sort Stack
+```py
+class Stack:
+    def __init__(self):
+        self.stack_list = []
+
+    def print_stack(self):
+        for i in range(len(self.stack_list)-1, -1, -1):
+            print(self.stack_list[i])
+
+    def is_empty(self):
+        return len(self.stack_list) == 0
+
+    def peek(self):
+        if self.is_empty():
+            return None
+        else:
+            return self.stack_list[-1]
+
+    def size(self):
+        return len(self.stack_list)
+
+    def push(self, value):
+        self.stack_list.append(value)
+
+    def pop(self):
+        if self.is_empty():
+            return None
+        else:
+            return self.stack_list.pop()
+
+
+def sort_stack(stack):
+    additional_stack = Stack()
+ 
+    while not stack.is_empty():
+        temp = stack.pop()
+ 
+        while not additional_stack.is_empty() and additional_stack.peek() > temp:
+            stack.push(additional_stack.pop())
+ 
+        additional_stack.push(temp)
+ 
+    while not additional_stack.is_empty():
+        stack.push(additional_stack.pop())
+
+
+
+my_stack = Stack()
+my_stack.push(3)
+my_stack.push(1)
+my_stack.push(5)
+my_stack.push(4)
+my_stack.push(2)
+
+print("Stack before sort_stack():")
+my_stack.print_stack()
+
+sort_stack(my_stack)
+
+print("\nStack after sort_stack:")
+my_stack.print_stack()
+
+
+
+"""
+    EXPECTED OUTPUT:
+    ----------------
+    Stack before sort_stack():
+    2
+    4
+    5
+    1
+    3
+
+    Stack after sort_stack:
+    1
+    2
+    3
+    4
+    5
+
+"""
+```
+### 7. Queue Using Stacks: Enqueue
+```py
+class MyQueue:
+    def __init__(self):
+        self.stack1 = []
+        self.stack2 = []
+        
+    def enqueue(self, value):
+        while len(self.stack1) > 0:
+            self.stack2.append(self.stack1.pop())
+            
+        self.stack1.append(value)
+        while len(self.stack2) > 0:
+            self.stack1.append(self.stack2.pop())
+            
+
+    def peek(self):
+        return self.stack1[-1]
+
+    def is_empty(self):
+        return len(self.stack1) == 0
+        
+        
+
+# Create a new queue
+q = MyQueue()
+
+# Enqueue some values
+q.enqueue(1)
+q.enqueue(2)
+q.enqueue(3)
+
+# Output the front of the queue
+print("Front of the queue:", q.peek())
+
+# Check if the queue is empty
+print("Is the queue empty?", q.is_empty())
+
+
+"""
+    EXPECTED OUTPUT:
+    ----------------
+    Front of the queue: 1
+    Is the queue empty? False
+    
+"""
+
+```
+### 8. Queue Using Stacks: Dequeue
+```py
+class MyQueue:
+    def __init__(self):
+        self.stack1 = []
+        self.stack2 = []
+        
+    def enqueue(self, value):
+        while len(self.stack1) > 0:
+            self.stack2.append(self.stack1.pop())
+        self.stack1.append(value)
+        while len(self.stack2) > 0:
+            self.stack1.append(self.stack2.pop())
+
+    def dequeue(self):
+        if self.is_empty():
+            return None
+        else:
+            return self.stack1.pop()
+
+    def peek(self):
+        return self.stack1[-1]
+
+    def is_empty(self):
+        return len(self.stack1) == 0
+        
+        
+
+# Create a new queue
+q = MyQueue()
+
+# Enqueue some values
+q.enqueue(1)
+q.enqueue(2)
+q.enqueue(3)
+
+# Output the front of the queue
+print("Front of the queue:", q.peek())
+
+# Dequeue some values
+print("Dequeued value:", q.dequeue())
+print("Dequeued value:", q.dequeue())
+
+# Enqueue another value
+q.enqueue(4)
+
+# Output the front of the queue again
+print("Front of the queue:", q.peek())
+
+# Dequeue all remaining values
+print("Dequeued value:", q.dequeue())
+print("Dequeued value:", q.dequeue())
+
+# Check if the queue is empty
+print("Is the queue empty?", q.is_empty())
+
+# Dequeue from an empty queue and check if it returns None
+print("Dequeued value from empty queue:", q.dequeue())
+
+
+
+"""
+    EXPECTED OUTPUT:
+    ----------------
+    Front of the queue: 1
+    Dequeued value: 1
+    Dequeued value: 2
+    Front of the queue: 3
+    Dequeued value: 3
+    Dequeued value: 4
+    Is the queue empty? True
+    Dequeued value from empty queue: None
+    
+"""
+
+```
