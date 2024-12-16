@@ -827,3 +827,4 @@ print("Dequeued value from empty queue:", q.dequeue())
 """
 
 ```
+<script src="https://gist.github.com/sudeepsudhevan/902db0cca7c9b35a172ab7dc02a2fc72.js"></script>
