@@ -155,7 +155,7 @@ class BinarySearchTree:
     def contains(self,value):
         if self.root == None:
             return False
-        
+                                # Above two lines are not necessary
         temp = self.root
         
         while temp is not None:
