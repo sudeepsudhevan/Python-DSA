@@ -749,8 +749,8 @@ print("Is the queue empty?", q.is_empty())
     Is the queue empty? False
     
 """
-
 ```
+(Explanataion)[https://gist.github.com/sudeepsudhevan/902db0cca7c9b35a172ab7dc02a2fc72]
 ### 8. Queue Using Stacks: Dequeue
 ```py
 class MyQueue:
@@ -827,4 +827,3 @@ print("Dequeued value from empty queue:", q.dequeue())
 """
 
 ```
-<script src="https://gist.github.com/sudeepsudhevan/902db0cca7c9b35a172ab7dc02a2fc72.js"></script>
