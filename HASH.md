@@ -192,7 +192,7 @@ print(my_hash_table.keys())
 
 """
 ```
-### 5. Find common value present two list
+### 5. Find common value present in two list
 Method 1
 ```py
 def item_in_common(list1, list2):
