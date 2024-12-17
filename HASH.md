@@ -260,3 +260,32 @@ print ( find_duplicates([]) )
 
 """
 ```
+### 7. HT: First Non-Repeating Character
+```py
+def first_non_repeating_char(string):
+    char_counts = {}
+    for letter in string:
+        char_counts[letter] = char_counts.get(letter,0) + 1
+    
+    for letter in string:
+        if char_counts[letter] == 1:
+            return letter
+    return None
+
+print( first_non_repeating_char('leetcode') )
+
+print( first_non_repeating_char('hello') )
+
+print( first_non_repeating_char('aabbcc') )
+
+
+
+"""
+    EXPECTED OUTPUT:
+    ----------------
+    l
+    h
+    None
+
+"""
+```
