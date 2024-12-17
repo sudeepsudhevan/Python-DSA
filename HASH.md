@@ -459,3 +459,67 @@ print(has_unique_chars('abacadaeaf')) # should return False
 
 """
 ```
+### 13. Write a function called find_pairs that takes in three arguments: arr1, arr2, and target, and returns a list of all such pairs.  Assume that each array does not contain duplicate values.
+```py
+def find_pairs(arr1, arr2, target):
+    set1 = set(arr1)
+    pairs = []
+    for num in arr2:
+        complement = target - num
+        if complement in set1:
+            pairs.append((complement, num))
+    return pairs
+
+
+
+arr1 = [1, 2, 3, 4, 5]
+arr2 = [2, 4, 6, 8, 10]
+target = 7
+
+pairs = find_pairs(arr1, arr2, target)
+print (pairs)
+
+
+
+"""
+    EXPECTED OUTPUT:
+    ----------------
+    [(5, 2), (3, 4), (1, 6)]
+
+"""
+
+```
+
+### 14. Set: Longest Consecutive Sequence 
+Given an unsorted array of integers, write a function that finds the length of the  longest_consecutive_sequence (i.e., sequence of integers in which each element is one greater than the previous element).
+```py
+def longest_consecutive_sequence(nums):
+    num_set = set(nums)
+    longest_sequence = 0
+    
+    for num in nums:
+        if num - 1 not in num_set:
+            current_num = num
+            current_sequence = 1
+            
+            while current_num + 1 in num_set:
+                current_num += 1
+                current_sequence += 1
+            
+            longest_sequence = max(longest_sequence, current_sequence)
+    
+    return longest_sequence
+
+
+
+print( longest_consecutive_sequence([100, 4, 200, 1, 3, 2]) )
+
+
+
+"""
+    EXPECTED OUTPUT:
+    ----------------
+    4
+
+"""
+```
