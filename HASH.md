@@ -406,3 +406,56 @@ print ( subarray_sum(nums, target) )
 """
 
 ```
+
+### 11. Set: Remove Duplicates
+```py
+def remove_duplicates(my_list):
+    new_list = list(set(my_list)) 
+    return new_list
+
+my_list = [1, 2, 3, 4, 1, 2, 5, 6, 7, 3, 4, 8, 9, 5]
+new_list = remove_duplicates(my_list)
+print(new_list)
+
+
+
+"""
+    EXPECTED OUTPUT:
+    ----------------
+    [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+    (Order may be different as sets are unordered)
+
+"""
+```
+
+### 12. Write a function called `has_unique_chars` that takes a string as input and returns `True` if all the characters in the string are unique, and `False` otherwise.
+```py
+def has_unique_chars(string):
+    char_set = set()
+    for letter in string:
+        if letter in char_set:
+            return False
+        char_set.add(letter)
+    return True
+
+
+print(has_unique_chars('abcdefg')) # should return True
+print(has_unique_chars('hello')) # should return False
+print(has_unique_chars('')) # should return True
+print(has_unique_chars('0123456789')) # should return True
+print(has_unique_chars('abacadaeaf')) # should return False
+
+
+
+"""
+    EXPECTED OUTPUT:
+    ----------------
+    True
+    False
+    True
+    True
+    False
+
+"""
+```
