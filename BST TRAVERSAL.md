@@ -1,2 +1,2 @@
 # Binary Search Tree Traversal
-## Breadth Search Tree
+## Breadth First Search
