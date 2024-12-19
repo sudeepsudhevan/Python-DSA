@@ -1,5 +1,5 @@
 # Binary Search Tree Traversal
-## Breadth First Search
+## Breadth First Search (BFS)
 ```py
 class Node:
     def __init__(self, value):
@@ -83,4 +83,14 @@ print(my_tree.BFS())
 
  """
 
+```
+## Depth First Search (DFS)
+### 1. DFS PreOrder
+```py
+```
+### 2. DFS PostOrder
+```py
+```
+### 1. DFS InOrder
+```py
 ```
