@@ -91,6 +91,6 @@ print(my_tree.BFS())
 ### 2. DFS PostOrder
 ```py
 ```
-### 1. DFS InOrder
+### 3. DFS InOrder
 ```py
 ```
