@@ -285,7 +285,7 @@ class BinarySearchTree:
 		    current_node.left = self.__delete_node(current_node.left, value)
 	    elif value > current_node.value: 
 		    current_node.right = self.__delete_node(current_node.right, value)
-	    else:
+	    else:									### code where we find the node
 		    if current_node.left == None and current_node.right == None:
 			    return None
 		    elif current_node.left == None:
